@@ -37,7 +37,7 @@ Scrapes messages and images from @CheMed123, @lobelia4cosmetics, @tikvahpharma.
 Stores data in data/raw/telegram_messages/<channel_name>.
 ### PostgreSQL Loader (src/load_to_postgres.py):
 Loads raw data into raw.telegram_messages and raw.image_detections.
-# YOLO Enrichment (src/process_images_yolo.py):
+### YOLO Enrichment (src/process_images_yolo.py):
 Processes images using YOLOv8 to detect medical objects.
 Stores results in raw.image_detections.
 ### dbt Transformations (medical_warehouse/):
@@ -50,10 +50,10 @@ marts.fct_messages
 marts.fct_image_detections
 ### FastAPI Application (api/):
 Exposes endpoints:
-GET /api/reports/top-products?limit=10: Top products by mention count.
-GET /api/channels/{channel_name}/activity: Channel posting activity.
-GET /api/search/messages?query=<query>: Search messages by keyword.
-Dagster Orchestration (orchestration/):
+- GET /api/reports/top-products?limit=10: Top products by mention count.
+- GET /api/channels/{channel_name}/activity: Channel posting activity.
+- GET /api/search/messages?query=<query>: Search messages by keyword.
+### Dagster Orchestration (orchestration/):
 Orchestrates the pipeline with ops for scraping, loading, YOLO processing, and dbt transformations.
 
 ### Run FastAPI:
