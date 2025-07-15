@@ -22,14 +22,14 @@ python -m venv venv
 pip install -r requirements.txt
 4. Configure Environment Variables: Create a .env file in the project root:
 
-TELEGRAM_API_ID=<your-api-id>
-TELEGRAM_API_HASH=<your-api-hash>
-PHONE=<your phone number >
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=<database name>
-DB_USER=<user>
-DB_PASSWORD=<password>
+- TELEGRAM_API_ID=<your-api-id>
+- TELEGRAM_API_HASH=<your-api-hash>
+- PHONE=<your phone number >
+- DB_HOST=localhost
+- DB_PORT=5432
+- DB_NAME=<database name>
+- DB_USER=<user>
+- DB_PASSWORD=<password>
 
 ## pipeline Components
  ### Telegram Scraper (src/telegram_scraper.py):
