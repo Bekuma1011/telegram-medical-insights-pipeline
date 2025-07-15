@@ -58,4 +58,6 @@ Orchestrates the pipeline with ops for scraping, loading, YOLO processing, and d
 
 ### Run FastAPI:
 uvicorn api.main:app --host 0.0.0.0 --port 8000
+### To access Endpoints
+http://localhost:8000/docs
 
